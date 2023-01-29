@@ -1,0 +1,93 @@
+
+
+
+<div class="form flex flex-wrap h-screen justify-center content-center">
+
+<ng-container *ngIf="formSubmitted === false">
+  <div class="formContainer  flex flex-wrap justify-center content-center w-auto ml-5 mr-5">
+
+    <form [formGroup]="reactiveForm" (ngSubmit)="submit()" #form="ngForm">
+
+        <nz-form-item>
+          <nz-form-control class="px-5 mt-5">
+
+            <nz-form-label for="fname">Ime</nz-form-label> 
+            <input nz-input type="text" id="fname" pattern="[a-zA-Zž]*" placeholder="Vaše ime..." formControlName="firstName" required> 
+
+        </nz-form-control>
+        </nz-form-item>
+        
+          <nz-form-item>
+            <nz-form-control class="px-5">
+
+              <nz-form-label for="lname">Priimek</nz-form-label> 
+              <input nz-input type="text" id="lname" pattern="[a-zA-Zž]*" placeholder="Vaš priimek..." formControlName="lastName" required> 
+              
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control class="px-5">
+
+              <nz-form-label for="wishes">Vaše Želje</nz-form-label> 
+              <input nz-input type="text" id="wishes" placeholder="Vaše Želje" required #wishInput > 
+
+              <nz-form-item class="pt-3 flex justify-center">
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40" type="button" (click)="addWish()">Dodaj</button> 
+             </nz-form-item>
+
+            </nz-form-control>
+          </nz-form-item>
+
+          <nz-form-item>
+            <nz-form-control>
+
+                <div nz-row nzGutter="16" nzGap="13">
+                    <div nz-col *ngFor="let wish of wishes; let i = index" [nzXs]="10" [nzSm]="10" [nzMd]="10" [nzLg]="10" [nzXl]="10" class="mb-3 ml-4 sm: ml-3 ">
+
+                      <div class="wishes flex flex-row justify-between content-center px-2 py-1 sm: ml-4 md: ml-10 ">
+                        <h1>{{wish}}</h1>
+                        <button type="button" class="removeButton" (click)="removeWish(i)">X</button>
+                      </div>
+
+                    </div>
+                </div>
+
+            </nz-form-control>
+        </nz-form-item>
+        
+
+          <nz-form-item class="flex justify-center content-center">
+            <nz-form-control class="flex justify-center content-center flex-wrap">
+              <button [ngClass]="{'bg-gray-500': form.invalid || wishes.length === 0 , 'bg-blue-500': form.valid, 'hover:bg-gray-500': form.invalid || wishes.length === 0 }" [disabled]="form.invalid" class="hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">Pošlji Pismo</button>
+
+
+            </nz-form-control>
+          </nz-form-item>
+         
+      
+    </form>
+
+  </div>
+ </ng-container>
+
+
+  <ng-container *ngIf="formSubmitted === true && gotResponse === false">
+
+    <div class="afterSubmit flex flex-col  content-center">
+      <span>Pošiljamo želje božičku...</span>
+      <div class="ring self-center"></div>
+    </div>
+
+  </ng-container>
+
+  <ng-container *ngIf="formSubmitted === true && gotResponse === true">
+
+    <div class="afterRequest flex flex-col justify-center content-center text-2xl sm: text-xl">
+      <h1>Želje so bile poslane božičku</h1>
+    </div>
+
+  </ng-container>
+
+</div>
+  

@@ -1,0 +1,32 @@
+
+
+@media only screen and (min-width: 880px) {
+  .home-container {
+    background-image: url("/assets/pull.svg");
+    background-position: 70% 52%;
+    background-repeat: no-repeat;
+    background-size: 60% auto;
+  }
+}
+
+  
+  
+h2 {
+  font-size: 30px;
+  font-family: 'Karla';
+  }
+  
+#blob1 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: rotate(-180deg);
+      z-index: 1;
+      }
+    
+#blob2 {
+      z-index: 1;
+      position: absolute;
+      transform: rotate(-180deg);
+      bottom: 0;
+      }

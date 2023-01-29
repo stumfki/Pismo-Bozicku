@@ -1,0 +1,141 @@
+/*Ozadje za pismo in media Query za ozadje */
+.form {
+    background-image: url('/assets/santareal.png');
+    background-position: 40% center;
+
+  
+}
+
+@media only screen and (max-width: 480px) {
+    .form {
+        background-image: url('/assets/santareal.png');
+        background-position: 30% 140%;
+    }
+}
+@media only screen and (min-width: 880px) {
+    .form {
+        background-image: url('/assets/santareal.png');
+        background-position: 40% center;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .form {
+        background-image: url('/assets/santaxxl.png');
+        background-position: 40% center;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .form {
+        background-image: url('/assets/santaxxl.png');
+        background-position: 50% center;
+    }
+}
+
+/*Css za formo */
+.formContainer {
+    background-color: #2a4063;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg');
+}
+
+.wishes {
+    background-color: #bfe3b4;
+    border-radius: 5px;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+}
+
+input[type="text"]:valid {
+  outline: 2px solid green;
+}
+
+.wishes h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.removeButton {
+    transition-duration: 0.4s;
+}
+
+.removeButton:hover {
+    color: red;
+   
+  }
+
+
+
+
+
+  
+/*Po submitu*/
+
+.ring {
+
+    
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 0.3;
+    background-color: "";
+    animation: ring 2s linear infinite;
+}
+
+  @keyframes ring {
+    0%{
+      transform: rotate(0deg);
+      box-shadow: 1px 5px 2px #e65c00;
+    }
+    50%{
+      transform: rotate(180deg);
+      box-shadow: 1px 5px 2px #18b201;
+    }
+    100%{
+      transform: rotate(360deg);
+      box-shadow: 1px 5px 2px #0456c8;
+    }
+  }
+  .ring:before{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0 0 5px rgba(255,255,255,.3);
+  }
+  span{
+    color: #dadada;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: text 3s ease-in-out infinite;
+  }
+
+  .afterRequest h1 {
+    color: #18b201;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: texth1 3s ease-in-out infinite;
+  }
+
+  @keyframes text {
+    50%{
+      color: black;
+    }
+  
+  }
+
+  @keyframes texth1 {
+    50%{
+      color: rgb(145, 255, 0);
+    }
+  
+  }
+

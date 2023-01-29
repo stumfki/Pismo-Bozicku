@@ -1,15 +1,12 @@
 import { Component } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
-
-
-
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
 })
-export class AppComponent {
 
+export class HomeComponent {
   public currentRoute: string;
 
   constructor(private router: Router) {
@@ -18,9 +15,6 @@ export class AppComponent {
           this.currentRoute = this.router.url;
       }
   });
-  
-}
 }
 
-
-
+}

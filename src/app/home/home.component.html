@@ -1,0 +1,24 @@
+<ng-container class="homePage" *ngIf="currentRoute === '/Home'">
+
+    <img src="assets/blob1.svg" id="blob1"/>
+    <img src="assets/blob2.svg" id="blob2"/>
+
+
+ <div class="home-container flex flex-col content-center h-full justify-center flex-wrap md:text-xl">
+    <div class="flex flex-col w-9/12">
+      
+    <div class="flex flex-col justify-center content-center flex-wrap w-full">
+        <h1 class="text-xl font-bold md:text-2xl lg:text-3xl">Božiček se veseli tvojih želja</h1>
+        <p class="flex justify-center text-xl italic font-light md:text-1xl lg:text-2xl">Pošlji mu pismo kaj želiš</p>
+    </div>
+
+    <div class="homeButton flex justify-center mt-2.5">
+        <button [routerLink]="['/Form']" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-40">
+            Pošlji Pismo
+        </button>
+    </div>
+
+    </div>
+ </div>
+
+</ng-container>

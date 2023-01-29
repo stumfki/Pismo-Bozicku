@@ -1,0 +1,28 @@
+
+.home-container {
+  background-image: url("/assets/945.jpg");
+  background-position: 20% 100%;
+  background-repeat: no-repeat;
+  background-size: 300px 300px;
+}
+
+
+h2 {
+    font-size: 30px;
+    font-family: 'Karla';
+}
+
+#blob1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: rotate(-180deg);
+    z-index: 1;
+  }
+  
+  #blob2 {
+    z-index: 1;
+    position: absolute;
+    transform: rotate(-180deg);
+    bottom: 0;
+  }
