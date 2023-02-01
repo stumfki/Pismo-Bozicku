@@ -1,5 +1,9 @@
 **Angular Santa Letter Application Documentation**
 
+**Preview of the app:**
+
+https://pismobozickudindobrnjic.netlify.app/Home
+
 **Introduction:**
 
 The Angular Santa Letter Application is a fun and interactive way for users to write a letter to Santa Claus. The letter can be created using reactive forms and the application is built using Angular and the Tailwind CSS and ng-zorro libraries.
