@@ -2,7 +2,7 @@
 
 **Preview of the app:**
 
-https://pismobozickudindobrnjic.netlify.app/Home
+https://pismobozickudindobrnjic.netlify.app
 
 **Introduction:**
 
